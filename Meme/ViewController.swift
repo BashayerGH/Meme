@@ -23,28 +23,29 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        setupTextField(tf: TopTextfield, text: "TOP")
+        setupTextField(tf: BottonTextfield, text: "BOTTOM")
+        shareButton.isEnabled = false
+
+        
+    }
+    
+    
+    func setupTextField(tf: UITextField, text: String) {
         
         let memeTextAttributes:[NSAttributedString.Key: Any] = [
             NSAttributedString.Key(rawValue: NSAttributedString.Key.strokeColor.rawValue): UIColor.black,
             NSAttributedString.Key(rawValue: NSAttributedString.Key.foregroundColor.rawValue): UIColor.white,
             NSAttributedString.Key(rawValue: NSAttributedString.Key.font.rawValue): UIFont(name: "HelveticaNeue-CondensedBlack", size: 40)!,
-            NSAttributedString.Key(rawValue: NSAttributedString.Key.strokeWidth.rawValue): 3.0]
+            NSAttributedString.Key(rawValue: NSAttributedString.Key.strokeWidth.rawValue): -4.0]
         
         
-        TopTextfield.defaultTextAttributes = memeTextAttributes
-        BottonTextfield.defaultTextAttributes = memeTextAttributes
-        
-        shareButton.isEnabled = false
-        
-        
-        //Text fields specifications
-        self.BottonTextfield.delegate = self
-        self.TopTextfield.delegate = self
-        TopTextfield.text = "TOP"
-        BottonTextfield.text = "BOTTOM"
-        TopTextfield.textAlignment = .center
-        BottonTextfield.textAlignment = .center
-        
+        tf.defaultTextAttributes = memeTextAttributes
+        tf.textColor = UIColor.white
+        tf.tintColor = UIColor.white
+        tf.textAlignment = .center
+        tf.text = text
+        tf.delegate = self
     }
     
     
