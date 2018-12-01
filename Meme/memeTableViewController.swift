@@ -46,7 +46,6 @@ class memeTableViewController: UIViewController, UITableViewDelegate, UITableVie
         let memeForRow = self.memes[(indexPath as NSIndexPath).row]
         cell.imageView?.image = memeForRow.memedImage
         cell.textLabel?.text = memeForRow.topText
-        
         return cell
     }
     

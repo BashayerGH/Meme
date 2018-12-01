@@ -69,8 +69,8 @@
 				111B540021B151F700DE2A2C /* DetailsViewController.swift */,
 				111B53FE21B13FEE00DE2A2C /* CollectionViewCell.swift */,
 				11A69C75219F3DBD002B05DC /* Main.storyboard */,
-				11A69C78219F3DBF002B05DC /* Assets.xcassets */,
 				11A69C7A219F3DBF002B05DC /* LaunchScreen.storyboard */,
+				11A69C78219F3DBF002B05DC /* Assets.xcassets */,
 				11A69C7D219F3DBF002B05DC /* Info.plist */,
 			);
 			path = Meme;
