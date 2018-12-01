@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		111B53FB21B11F7D00DE2A2C /* memeCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 111B53FA21B11F7D00DE2A2C /* memeCollectionViewController.swift */; };
+		111B53FD21B11F9000DE2A2C /* memeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 111B53FC21B11F9000DE2A2C /* memeTableViewController.swift */; };
+		111B53FF21B13FEE00DE2A2C /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 111B53FE21B13FEE00DE2A2C /* CollectionViewCell.swift */; };
+		111B540121B151F700DE2A2C /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 111B540021B151F700DE2A2C /* DetailsViewController.swift */; };
 		11A69C72219F3DBD002B05DC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A69C71219F3DBD002B05DC /* AppDelegate.swift */; };
 		11A69C74219F3DBD002B05DC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A69C73219F3DBD002B05DC /* ViewController.swift */; };
 		11A69C77219F3DBD002B05DC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11A69C75219F3DBD002B05DC /* Main.storyboard */; };
@@ -15,6 +19,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		111B53FA21B11F7D00DE2A2C /* memeCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = memeCollectionViewController.swift; sourceTree = "<group>"; };
+		111B53FC21B11F9000DE2A2C /* memeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = memeTableViewController.swift; sourceTree = "<group>"; };
+		111B53FE21B13FEE00DE2A2C /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
+		111B540021B151F700DE2A2C /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 		11A69C6E219F3DBD002B05DC /* Meme.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Meme.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		11A69C71219F3DBD002B05DC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		11A69C73219F3DBD002B05DC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -56,6 +64,10 @@
 			children = (
 				11A69C71219F3DBD002B05DC /* AppDelegate.swift */,
 				11A69C73219F3DBD002B05DC /* ViewController.swift */,
+				111B53FC21B11F9000DE2A2C /* memeTableViewController.swift */,
+				111B53FA21B11F7D00DE2A2C /* memeCollectionViewController.swift */,
+				111B540021B151F700DE2A2C /* DetailsViewController.swift */,
+				111B53FE21B13FEE00DE2A2C /* CollectionViewCell.swift */,
 				11A69C75219F3DBD002B05DC /* Main.storyboard */,
 				11A69C78219F3DBF002B05DC /* Assets.xcassets */,
 				11A69C7A219F3DBF002B05DC /* LaunchScreen.storyboard */,
@@ -135,8 +147,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				111B53FF21B13FEE00DE2A2C /* CollectionViewCell.swift in Sources */,
 				11A69C74219F3DBD002B05DC /* ViewController.swift in Sources */,
+				111B53FB21B11F7D00DE2A2C /* memeCollectionViewController.swift in Sources */,
 				11A69C72219F3DBD002B05DC /* AppDelegate.swift in Sources */,
+				111B53FD21B11F9000DE2A2C /* memeTableViewController.swift in Sources */,
+				111B540121B151F700DE2A2C /* DetailsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

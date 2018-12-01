@@ -19,7 +19,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     @IBOutlet weak var UpperToolBar: UIToolbar!
     
     
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -133,8 +133,10 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
 
     
     func save(){
-        // Create the meme object
+        // Create the meme object and add it to the meme array on app delegate
         let memeObject = Meme(topText: TopTextfield.text!, bottomText: BottonTextfield.text!, originalImage: imagePickerView.image!, memedImage: generateMemedImage())
+        
+        (UIApplication.shared.delegate as! AppDelegate).memes.append(memeObject)
     }
     
     
