@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		110A2BAD21B38C2100ADD017 /* Meme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 110A2BAC21B38C2100ADD017 /* Meme.swift */; };
 		111B53FB21B11F7D00DE2A2C /* memeCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 111B53FA21B11F7D00DE2A2C /* memeCollectionViewController.swift */; };
 		111B53FD21B11F9000DE2A2C /* memeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 111B53FC21B11F9000DE2A2C /* memeTableViewController.swift */; };
 		111B53FF21B13FEE00DE2A2C /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 111B53FE21B13FEE00DE2A2C /* CollectionViewCell.swift */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		110A2BAC21B38C2100ADD017 /* Meme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meme.swift; sourceTree = "<group>"; };
 		111B53FA21B11F7D00DE2A2C /* memeCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = memeCollectionViewController.swift; sourceTree = "<group>"; };
 		111B53FC21B11F9000DE2A2C /* memeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = memeTableViewController.swift; sourceTree = "<group>"; };
 		111B53FE21B13FEE00DE2A2C /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
@@ -68,6 +70,7 @@
 				111B53FA21B11F7D00DE2A2C /* memeCollectionViewController.swift */,
 				111B540021B151F700DE2A2C /* DetailsViewController.swift */,
 				111B53FE21B13FEE00DE2A2C /* CollectionViewCell.swift */,
+				110A2BAC21B38C2100ADD017 /* Meme.swift */,
 				11A69C75219F3DBD002B05DC /* Main.storyboard */,
 				11A69C7A219F3DBF002B05DC /* LaunchScreen.storyboard */,
 				11A69C78219F3DBF002B05DC /* Assets.xcassets */,
@@ -149,6 +152,7 @@
 			files = (
 				111B53FF21B13FEE00DE2A2C /* CollectionViewCell.swift in Sources */,
 				11A69C74219F3DBD002B05DC /* ViewController.swift in Sources */,
+				110A2BAD21B38C2100ADD017 /* Meme.swift in Sources */,
 				111B53FB21B11F7D00DE2A2C /* memeCollectionViewController.swift in Sources */,
 				11A69C72219F3DBD002B05DC /* AppDelegate.swift in Sources */,
 				111B53FD21B11F9000DE2A2C /* memeTableViewController.swift in Sources */,

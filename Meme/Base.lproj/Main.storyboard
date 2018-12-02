@@ -228,12 +228,12 @@
                                 <items>
                                     <barButtonItem title="Share" id="gYO-Pq-asE">
                                         <connections>
-                                            <action selector="ShereAnImage:" destination="BYZ-38-t0r" id="DUo-vn-W8M"/>
+                                            <action selector="shereAnImage:" destination="BYZ-38-t0r" id="wcz-cO-UJh"/>
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem systemItem="cancel" id="YEb-w7-FnG">
                                         <connections>
-                                            <action selector="Cancel:" destination="BYZ-38-t0r" id="xxy-1v-zXA"/>
+                                            <action selector="cancel:" destination="BYZ-38-t0r" id="3D0-K8-fKL"/>
                                         </connections>
                                     </barButtonItem>
                                 </items>
@@ -294,13 +294,13 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="BottonTextfield" destination="Zc8-ht-9He" id="7qx-g5-w6g"/>
-                        <outlet property="ToolBar" destination="V22-ib-Asp" id="RpQ-58-Wkt"/>
-                        <outlet property="TopTextfield" destination="Eqr-vT-eGa" id="2t2-BZ-T99"/>
-                        <outlet property="UpperToolBar" destination="4S0-ua-pBk" id="s2n-Ad-EdR"/>
+                        <outlet property="BottonTextField" destination="Zc8-ht-9He" id="2eT-GY-D0q"/>
+                        <outlet property="TopTextField" destination="Eqr-vT-eGa" id="agO-v9-Wob"/>
                         <outlet property="cameraButton" destination="o1E-te-6hO" id="yrj-Ec-Gyp"/>
                         <outlet property="imagePickerView" destination="ddw-Oa-cts" id="Zpu-qN-jjH"/>
                         <outlet property="shareButton" destination="gYO-Pq-asE" id="ACz-wR-2rt"/>
+                        <outlet property="toolBar" destination="V22-ib-Asp" id="Rtb-DF-acq"/>
+                        <outlet property="upperToolBar" destination="4S0-ua-pBk" id="R7b-AA-Odl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

@@ -12,19 +12,19 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     @IBOutlet weak var imagePickerView: UIImageView!
     @IBOutlet weak var cameraButton: UIBarButtonItem!
-    @IBOutlet weak var TopTextfield: UITextField!
-    @IBOutlet weak var BottonTextfield: UITextField!
+    @IBOutlet weak var TopTextField: UITextField!
+    @IBOutlet weak var BottonTextField: UITextField!
     @IBOutlet weak var shareButton: UIBarButtonItem!
-    @IBOutlet weak var ToolBar: UIToolbar!
-    @IBOutlet weak var UpperToolBar: UIToolbar!
+    @IBOutlet weak var toolBar: UIToolbar!
+    @IBOutlet weak var upperToolBar: UIToolbar!
     
     
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        setupTextField(tf: TopTextfield, text: "TOP")
-        setupTextField(tf: BottonTextfield, text: "BOTTOM")
+        setupTextField(tf: TopTextField, text: "TOP")
+        setupTextField(tf: BottonTextField, text: "BOTTOM")
         shareButton.isEnabled = false
 
         
@@ -56,12 +56,16 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     }
     
     
-    //pick an image from Album
-    @IBAction func pickAnImage(_ sender: Any) {
+    func presentImagePickerWith(sourceType: UIImagePickerController.SourceType) {
         let imagePicker = UIImagePickerController()
         imagePicker.delegate = self
-        imagePicker.sourceType = .photoLibrary
-        present(imagePicker, animated: true, completion: nil)
+        imagePicker.sourceType = sourceType
+        present(imagePicker, animated:true, completion:nil)
+    }
+    
+    //pick an image from Album
+    @IBAction func pickAnImage(_ sender: Any) {
+       presentImagePickerWith(sourceType: UIImagePickerController.SourceType.photoLibrary)
     }
     
     
@@ -82,9 +86,8 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     //pick an image from Camera
     @IBAction func pickAnImageFromCamera(_ sender: Any) {
-        let imagePicker = UIImagePickerController()
-        imagePicker.delegate = self
-        present(imagePicker, animated: true, completion: nil)
+        presentImagePickerWith(sourceType: UIImagePickerController.SourceType.camera)
+
     }
     
     
@@ -108,18 +111,24 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
                                                name: UIResponder.keyboardWillHideNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow),
                                                name: UIResponder.keyboardWillChangeFrameNotification, object: nil)
+        
+        self.tabBarController?.tabBar.isHidden = true
+        self.navigationController?.navigationBar.isHidden = true
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillHideNotification, object: nil)
         NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillChangeFrameNotification, object: nil)
+        
+        self.tabBarController?.tabBar.isHidden = false
+        self.navigationController?.navigationBar.isHidden = false
     }
     
     
     @objc func keyboardWillShow(notification:Notification) {
         
-        if BottonTextfield.isEditing{
+        if BottonTextField.isEditing{
             let userInfo = notification.userInfo
             let keyboardSize = userInfo![UIResponder.keyboardFrameEndUserInfoKey] as! NSValue // of CGRect
             view.frame.origin.y =  -keyboardSize.cgRectValue.height
@@ -134,13 +143,13 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     func save(){
         // Create the meme object and add it to the meme array on app delegate
-        let memeObject = Meme(topText: TopTextfield.text!, bottomText: BottonTextfield.text!, originalImage: imagePickerView.image!, memedImage: generateMemedImage())
+        let memeObject = Meme(topText: TopTextField.text!, bottomText: BottonTextField.text!, originalImage: imagePickerView.image!, memedImage: generateMemedImage())
         
         (UIApplication.shared.delegate as! AppDelegate).memes.append(memeObject)
     }
     
     
-    @IBAction func ShereAnImage(_ sender: Any) {
+    @IBAction func shereAnImage(_ sender: Any) {
         
         let image = generateMemedImage()
         let imageView = [image]
@@ -165,8 +174,8 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
      ///////////\\\\\\\\\\\\////////////\\\\\\\\\\\\
     func generateMemedImage() -> UIImage {
-        ToolBar.isHidden = true
-        UpperToolBar.isHidden = true
+        
+       configureBars(true)
         
         
         // Render view to an image
@@ -175,25 +184,23 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         let memedImage:UIImage = UIGraphicsGetImageFromCurrentImageContext()!
         UIGraphicsEndImageContext()
         
-        ToolBar.isHidden = false
-        UpperToolBar.isHidden = false
+        configureBars(false)
         
         return memedImage
     }
     
-    @IBAction func Cancel(_ sender: Any) {
-        TopTextfield.text = "TOP"
-        BottonTextfield.text = "BOTTOM"
-        imagePickerView.image = nil
-        shareButton.isEnabled = false
+    func configureBars(_ isHidden: Bool) {
+        toolBar.isHidden = isHidden
+        upperToolBar.isHidden = isHidden
+    }
+    
+    @IBAction func cancel(_ sender: Any) {
+        //TopTextfield.text = "TOP"
+        //BottonTextfield.text = "BOTTOM"
+        //imagePickerView.image = nil
+        //shareButton.isEnabled = false
+        self.navigationController?.popToRootViewController(animated: true)
     }
     
     
-}
-
-struct Meme {
-    var topText: String
-    var bottomText: String
-    var originalImage: UIImage
-    var memedImage: UIImage
 }
