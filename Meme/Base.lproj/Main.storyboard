@@ -226,7 +226,7 @@
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4S0-ua-pBk">
                                 <rect key="frame" x="0.0" y="24" width="375" height="44"/>
                                 <items>
-                                    <barButtonItem title="Share" id="gYO-Pq-asE">
+                                    <barButtonItem systemItem="action" id="gYO-Pq-asE">
                                         <connections>
                                             <action selector="shereAnImage:" destination="BYZ-38-t0r" id="wcz-cO-UJh"/>
                                         </connections>
@@ -246,7 +246,7 @@
                                             <action selector="pickAnImage:" destination="BYZ-38-t0r" id="0AF-hN-WsN"/>
                                         </connections>
                                     </barButtonItem>
-                                    <barButtonItem title="Camera" id="o1E-te-6hO">
+                                    <barButtonItem systemItem="camera" id="o1E-te-6hO">
                                         <connections>
                                             <action selector="pickAnImageFromCamera:" destination="BYZ-38-t0r" id="jdG-Ke-6Nc"/>
                                         </connections>
@@ -264,7 +264,7 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="Zc8-ht-9He">
-                                <rect key="frame" x="51" y="526" width="272" height="17"/>
+                                <rect key="frame" x="51" y="570" width="272" height="17"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
@@ -273,7 +273,7 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="4S0-ua-pBk" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="4vk-op-ZfH"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Zc8-ht-9He" secondAttribute="bottom" constant="124" id="An1-MT-8Or"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Zc8-ht-9He" secondAttribute="bottom" constant="80" id="An1-MT-8Or"/>
                             <constraint firstItem="ddw-Oa-cts" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Cef-qe-Acx"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Eqr-vT-eGa" secondAttribute="trailing" constant="52" id="MVI-SF-Ryf"/>
                             <constraint firstItem="ddw-Oa-cts" firstAttribute="top" secondItem="4S0-ua-pBk" secondAttribute="bottom" id="Oj6-3D-Rx9"/>
